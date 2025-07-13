@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Trade</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>AI Trading Bot Interface</h2>
+    <canvas id="liveChart" width="800" height="400"></canvas>
+    <script>
+    const ctx = document.getElementById('liveChart').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+            datasets: [{
+                label: 'AI Predictions',
+                data: [120, 125, 130, 128],
+                borderColor: 'blue',
+                borderWidth: 2
+            }]
+        }
+    });
+    </script>
+</body>
+</html>
